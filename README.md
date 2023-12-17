@@ -2,7 +2,7 @@
 <h1 align="center"><a target="_blank" href="">VISIT HERE</a></h1>
 
 <a target="_blank" href="">
-  <img src="" alt="Mungo Meal Banner Gif">
+  <img src="/public/banner.gif" alt="Mungo Meal Banner Gif">
 </a>
 
 <br/>
@@ -40,21 +40,21 @@ Demo Email: <span>mungomeal@</span><span>mail.com</span>
 Demo Password: mungomeal
 
 ## Next Version
-I am currently working towards more features for our users in the upcoming v1.1. This new version would bring the addition of:
+In the upcoming v1.1, more features will be added to improve accessibility and customizability. This new version would bring the addition of:
 - Pagination to views
 - Comparing Similar Products with a score
 - Users to add custom food items.
 
 ## Next features to implement:
-- Adding a status indicator for the FoodFactsAPI that lets you know whether it's offline or not.
+- Adding a status indicator for the FoodFactsAPI that lets you know whether it's offline.
 - Adding image quality settings when searching by description for items
 - Adding settings to modify how many results you want to appear per page
 - Integrate a serving size calculator that scales the results with your desired portions.
 
 ### Possible future updates
-- Create daily values percent (%dv) for micro and macro nutrients along with the already existing amounts per serving.
+- Create daily values percent (%dv) for micro and macronutrients and existing amounts per serving.
 - Make a user allergen warning system that alerts users when foods may contain what they're allergic to.
-- Add vegan filtering from product suggestions, and alert users when a product may contain meat/dairy/eggs.
+- Add vegan product filtering, and alert users when a product may contain meat/dairy/eggs.
 - Cumulate all the detailed information for each product into a meal plan, and compare new options / better alternatives for other products.
 
 ## Lessons Learned:
