@@ -13,6 +13,12 @@ export async function checkFavorite(id, setter){
       .eq('user_id', userId)
       .limit(1)
 
+     /* select count(*) 
+        from countries 
+        where 'product_id' = id 
+        and 'user_id' = userId 
+        limit 1; */
+
     const codes = data.map(({product_id}) => product_id).join(',')
     const res = await fetch(`https://world.openfoodfacts.net/api/v2/search?code=${codes}&page_size=24&page=1&sort_by=popularity_key&fields=code,product_name_en,nutrition_grades,image_thumb_url,brands,quantity,ecoscore_grade`)
     // handle error

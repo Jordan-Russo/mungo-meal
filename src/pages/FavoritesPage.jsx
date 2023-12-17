@@ -38,6 +38,8 @@ function FavoritesPage() {
 
   useEffect(() => {getFavorites(setMatches)}, [])
 
+  const hasMatches = Boolean(matches?.[0]?.code)
+
   // you can only modify the state when you're viewing a single product by clicking on a star
   // when you view single products, that star should appear in 2 forms whether you have it favorited or not.
 
@@ -56,7 +58,7 @@ function FavoritesPage() {
             gap: 10
           }}>
           {/* Handles Products Search */}
-          {Array.isArray(matches) &&
+          {hasMatches &&
             matches.map(
               (product) => 
                 <Item 
@@ -66,12 +68,11 @@ function FavoritesPage() {
                 />
             )
           }
-          {/* Handles Item Search */}
-          { Array.isArray(matches) || 
-            <Item
-            product={matches}
-            />
-          }
+          {hasMatches || 
+          <>
+            <p>No Saved Products... Search for products that you want and ⭐ STAR ⭐ them to save them here!</p>
+          </>
+            }
           </div>
         </Panel>
       </Panel>

@@ -13,9 +13,9 @@ export default function WelcomePage() {
             Get started by searching for your favorite food or an item in your shopping cart either with a description or a UPC code #. 
           </p>
           <Search 
-          id="search"
-          btnMsg="Find Products"
-          placeholder="ex. apple pie"
+            id="searchBar"
+            btnMsg="Find Products"
+            placeholder="ex. apple pie"
           />
         </Panel>
       </Panel>

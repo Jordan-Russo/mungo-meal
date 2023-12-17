@@ -57,6 +57,13 @@ export default function Item({
     const { error } = await supabase
       .from('favorites')
       .insert({ user_id: userId, product_id: `${productId}` })
+      /*  insert into favorites (
+        'user_id', 'product_id'
+      ) values (
+        userId, productId
+      );
+
+      */
     if(!error){
       setFavorite(true)
     }else{
@@ -69,6 +76,11 @@ export default function Item({
       .delete()
       .eq('user_id', userId)
       .eq('product_id', productId)
+      /* 
+      delete from favorites
+      where 'user_id' = userId
+      and 'product_id' = productId
+      */
     if(!error){
       setFavorite(false)
     }else{

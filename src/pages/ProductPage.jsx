@@ -21,7 +21,7 @@ export default function ProductPage() {
         .eq('product_id', id)
         .eq('user_id', userId)
         .limit(1)
-  
+      
       const isFavorited = Boolean(data?.length)
       // console.log(`${id} is ${isFavorited ? 'favorited' : 'not favorited'}`)
       setter(isFavorited)
@@ -29,12 +29,6 @@ export default function ProductPage() {
         console.error(`Error fetching data: ${error.message}`)
       }
     }
-  }
-
-  async function toggleFavorite(setter){
-    // check if record exists
-    // if it does ! its value
-    // if it doesn't insert record being true
   }
 
   useEffect(() => {
@@ -56,7 +50,7 @@ export default function ProductPage() {
             Get started by searching for your favorite food or an item in your shopping cart either with a description or a UPC code #. 
           </p>
           <Search 
-          id="search"
+          id="searchBar"
           btnMsg="Find Products"
           placeholder="ex. apple pie"
           />
