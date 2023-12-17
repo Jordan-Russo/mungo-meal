@@ -1,14 +1,14 @@
-<p align="center"><a target="_blank" href=""><img src="/public/logo.svg" height="40"></img></a></p>
-<h1 align="center"><a target="_blank" href="">VISIT HERE</a></h1>
+<p align="center"><a target="_blank" href="https://mungo-meal.onrender.com/"><img src="/public/logo.svg" height="40"></img></a></p>
+<h1 align="center"><a target="_blank" href="https://mungo-meal.onrender.com/">VISIT HERE</a></h1>
 
-<a target="_blank" href="">
-  <img src="/public/banner.gif" alt="Mungo Meal Banner Gif">
+<a target="_blank" href="https://mungo-meal.onrender.com/">
+  <img src="/public/banner.gif" alt="Mungo Meal Banner">
 </a>
 
 <br/>
 <br/>
 
-<p>Empower Your Plate; Know Your Food; Uncover the Truth of Foods when you shop using <a target="_blank" href="https://tribal-pvj0.onrender.com/">Mungo Meal</a>!
+<p>Empower Your Plate; Know Your Food; Uncover the Truth of Foods when you shop using <a target="_blank" href="https://mungo-meal.onrender.com/">Mungo Meal</a>!
   Users can see and save detailed nutritional information on their favorite foods in a digestible way when shopping to make healthy and informed decisions. 
   Users won't have to guess what they're placing into their cart or putting into their mouths and can spot dishonest claims and labels.
 </p>
