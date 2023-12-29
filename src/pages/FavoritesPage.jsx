@@ -26,7 +26,7 @@ function FavoritesPage() {
     
     // console.log(userId)
       const codes = data ? data.map(({product_id}) => product_id).join(',') : ''
-      const res = await fetch(`https://world.openfoodfacts.net/api/v2/search?code=${codes}&page_size=24&page=1&sort_by=popularity_key&fields=code,product_name_en,nutrition_grades,image_thumb_url,brands,quantity,ecoscore_grade`)
+      const res = await fetch(`https://world.openfoodfacts.org/api/v2/search?code=${codes}&page_size=24&page=1&sort_by=popularity_key&fields=code,product_name_en,nutrition_grades,image_thumb_url,brands,quantity,ecoscore_grade`)
       // handle error
       const {products} = await res.json()
       setter(products)

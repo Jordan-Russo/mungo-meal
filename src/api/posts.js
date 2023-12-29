@@ -20,7 +20,7 @@ export async function checkFavorite(id, setter){
         limit 1; */
 
     const codes = data.map(({product_id}) => product_id).join(',')
-    const res = await fetch(`https://world.openfoodfacts.net/api/v2/search?code=${codes}&page_size=24&page=1&sort_by=popularity_key&fields=code,product_name_en,nutrition_grades,image_thumb_url,brands,quantity,ecoscore_grade`)
+    const res = await fetch(`https://world.openfoodfacts.org/api/v2/search?code=${codes}&page_size=24&page=1&sort_by=popularity_key&fields=code,product_name_en,nutrition_grades,image_thumb_url,brands,quantity,ecoscore_grade`)
     // handle error
     const {products} = await res.json()
     setter(products)
@@ -35,7 +35,7 @@ export async function getProducts(setter, name) {
   // setState and display them
   // fetch url needs to be changed.
   // console.log(`1 request sent for:`, name)
-  const res = await fetch(`https://world.openfoodfacts.net/api/v2/search?page_size=24&page=1&sort_by=popularity_key&fields=code,product_name_en,nutrition_grades,image_thumb_url,brands,quantity,ecoscore_grade&countries_tags_en=united-states&categories_tags_en=${name}`)
+  const res = await fetch(`https://world.openfoodfacts.org/api/v2/search?page_size=24&page=1&sort_by=popularity_key&fields=code,product_name_en,nutrition_grades,image_thumb_url,brands,quantity,ecoscore_grade&countries_tags_en=united-states&categories_tags_en=${name}`)
   // handle error
   const {products} = await res.json()
   // console.log(products)
@@ -48,7 +48,7 @@ export async function getProduct(setter, id) {
   try{
     // console.log(`1 request sent for:`, id)
     const res = await fetch(
-      `https://world.openfoodfacts.net/api/v2/product/${id}?fields=code,product_name_en,nutrition_grades,image_thumb_url,brands,quantity,ecoscore_grade,image_url,energy-kcal_100g,carbohydrates_100g,fat_100g,fiber_100g,proteins_100g,sodium_100g,sugars_100g,image_nutrition_url,allergens_tags,traces_tags,ingredients_text,image_ingredients_url`
+      `https://world.openfoodfacts.org/api/v2/product/${id}?fields=code,product_name_en,nutrition_grades,image_thumb_url,brands,quantity,ecoscore_grade,image_url,energy-kcal_100g,carbohydrates_100g,fat_100g,fiber_100g,proteins_100g,sodium_100g,sugars_100g,image_nutrition_url,allergens_tags,traces_tags,ingredients_text,image_ingredients_url`
       )
       // handle error
       const {product} = await res.json()
