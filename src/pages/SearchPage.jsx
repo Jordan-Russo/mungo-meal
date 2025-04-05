@@ -23,7 +23,7 @@ export default function SearchPage() {
           <h2>Welcome to Mungo Meal!</h2>
           <p>Empower Your Plate; Know Your Food, Uncover the Truth!</p>
           <p>
-            Get started by searching for your favorite food or an item in your shopping cart either with a description or a UPC code #. 
+            Get started by searching for your favorite food or an item in your shopping cart either with a description or a UPC code #
           </p>
           <Search 
           id="searchBar"
