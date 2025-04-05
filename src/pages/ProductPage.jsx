@@ -54,19 +54,16 @@ export default function ProductPage() {
           btnMsg="Find Products"
           placeholder="ex. apple pie"
           />
-        <div className='item-container' style={{
-          marginTop: 50,
-          display: 'flex',
-          flexWrap: 'wrap',
-          justifyContent: 'space-around',
-          alignItems: 'stretch',
-          gap: 10
-        }}>
-        {/* Handles Item Search */}
-        { product &&
-          <Item product={product} isFavorited={favorite} setFavorite={setFavorite}/>
-        }
-        </div>
+          <div className='item-container' style={{
+            marginTop: 50,
+            display: 'flex',
+            flexWrap: 'wrap',
+            justifyContent: 'space-around',
+            alignItems: 'stretch',
+            gap: 10
+          }}>
+            {product && <Item product={product} isFavorited={favorite} setFavorite={setFavorite} isProductPage={true}/>}
+          </div>
         </Panel>
       </Panel>
     </Stack>

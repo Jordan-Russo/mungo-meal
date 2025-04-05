@@ -4,7 +4,7 @@ import { useAuth } from "../hooks/Auth";
 import { supabaseClient as supabase } from '../config/supabase-client';
 
 export default function Item({
-  product, isFavorited, setFavorite
+  product, isFavorited, setFavorite, isProductPage
 }) {
 
   const {user} = useAuth()
@@ -88,7 +88,7 @@ export default function Item({
     }
   }
   return (
-    <div className='item clickable' id={id} onClick={handleClick} style={{
+    <div className={`item ${isProductPage ? '' : 'clickable'}`} id={id} onClick={handleClick} style={{
       padding: '15px 15px 5px 15px',
       background: '#fff6',
       border: 'black solid 3px',
@@ -120,10 +120,10 @@ export default function Item({
       />
       {isDetailed || <h2 className="text-4xl" style={{textWrap: 'balance',
   wordBreak: 'break-word', fontSize: '1.6rem', lineHeight: '1.6rem'}}>{itemTitle}</h2>}
-      <div className="icon-container" style={{display: 'flex'}}>
+      <div className="icon-container" style={{display: 'flex', justifyContent: 'space-between'}}>
         <img className="icon" src={`/images/nutriscore/nutriscore-${ecoscore?.length === 1 ? ecoscore : 'unknown'}.svg`} style={{maxWidth: hasUser && isDetailed ? '33%' : '50%'}}/>
         <img className="icon" src={`/images/ecoscore/ecoscore-${ecoscore?.length === 1 ? ecoscore : 'unknown'}.svg`} style={{maxWidth: hasUser && isDetailed ? '33%' : '50%'}}/>
-        {hasUser && isDetailed && <img src={isFavorited ? "/favorite.svg" : "/unfavorite.svg"} style={{maxHeight: '100%'}} onClick={toggleFavorite}/>}
+        {hasUser && isDetailed && <img className='clickable' src={isFavorited ? "/favorite.svg" : "/unfavorite.svg"} style={{maxHeight: '100%'}} onClick={toggleFavorite}/>}
       </div>
       {/* More details for item specific search */}
       {isDetailed &&
