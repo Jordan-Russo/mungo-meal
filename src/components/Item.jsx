@@ -88,7 +88,7 @@ export default function Item({
     }
   }
   return (
-    <div className='item' id={id} onClick={handleClick} style={{
+    <div className='item clickable' id={id} onClick={handleClick} style={{
       padding: '15px 15px 5px 15px',
       background: '#fff6',
       border: 'black solid 3px',
