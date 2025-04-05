@@ -22,7 +22,7 @@ async function handleSearch(e) {
 
   return (
     <>
-      <Form onSubmit={handleSearch}>
+      <Form onSubmit={handleSearch} style={{paddingTop: 10}}>
         <InputGroup>
           <Input id={id} placeholder={placeholder} autoComplete='off'/>
           <InputGroup.Button onClick={handleSearch}>
